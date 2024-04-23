@@ -1,0 +1,31 @@
+name: Container Image Existence Checker
+
+description: Check if a given ECR or Docker Hub image exists or not in the registry.
+
+inputs:
+  type:
+    required: true
+    default: "ecr"
+    description: Type of the registry, allowed values are "ecr" and "dockerhub"
+  container_repo_name:
+    required: true
+    description: Name of the Container Repository
+  image_tag:
+    required: true
+    description: Image Tag for which you want to check.
+  dockerhub_username:
+    required: false
+    description: Docker Hub username for authentication for private repositories.
+  dockerhub_token:
+    required: false
+    description: Docker Hub Personal Access Token for authentication for private repositories.
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.type }}
+    - ${{ inputs.container_repo_name }}
+    - ${{ inputs.image_tag }}
+    - ${{ inputs.dockerhub_username }}
+    - ${{ inputs.dockerhub_token }}
