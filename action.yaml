@@ -2,6 +2,10 @@ name: Container Image Existence Checker
 
 description: Check if a given ECR or Docker Hub image exists or not in the registry.
 
+branding:
+  icon: check-square
+  color: white
+
 inputs:
   type:
     required: true
