@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CONTAINER_REPO_NAME="$2"
 CONTAINER_IMAGE_TAG="$3"
 
