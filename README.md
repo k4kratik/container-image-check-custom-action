@@ -13,7 +13,7 @@ _for ecr, it assumes you have already set up the AWS Creds setup. You can use th
 
 ```yaml
 - name: Check if the image exists
-  uses: k4kratik/container-image-existence-checker
+  uses: k4kratik/container-image-check-custom-action
   with:
     type: dockerhub
     container_repo_name: my-service-name
@@ -37,7 +37,7 @@ _for ecr, it assumes you have already set up the AWS Creds setup. You can use th
   uses: aws-actions/amazon-ecr-login@v2
 
 - name: Check if the image exists
-  uses: k4kratik/container-image-existence-checker
+  uses: k4kratik/container-image-check-custom-action
   with:
     type: dockerhub # or ecr
     container_repo_name: my-service-name
