@@ -20,6 +20,10 @@ inputs:
     required: false
     description: Docker Hub Personal Access Token for authentication for private repositories.
 
+outputs:
+  image_exists:
+    description: "A boolean value to indicate if the image exists"
+
 runs:
   using: "docker"
   image: "Dockerfile"
