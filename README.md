@@ -42,6 +42,4 @@ _for ecr, it assumes you have already set up the AWS Creds setup. You can use th
     type: dockerhub # or ecr
     container_repo_name: my-service-name
     image_tag: ${{ github.sha }}
-    dockerhub_username: ${{ secrets.DOCKERHUB_USER }}
-    dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
 ```
