@@ -12,14 +12,14 @@ _for ecr, it assumes you have already set up the AWS Creds setup. You can use th
 ## Usage - Docker Hub
 
 ```yaml
-    - name: Check if the image exists
-    uses: k4kratik/container-image-existence-checker
-    with:
-        type: dockerhub
-        container_repo_name: my-service-name
-        image_tag: ${{ github.sha }}
-        dockerhub_username: ${{ secrets.DOCKERHUB_USER }}
-        dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+- name: Check if the image exists
+  uses: k4kratik/container-image-existence-checker
+  with:
+    type: dockerhub
+    container_repo_name: my-service-name
+    image_tag: ${{ github.sha }}
+    dockerhub_username: ${{ secrets.DOCKERHUB_USER }}
+    dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
 ```
 
 ## Usage - AWS ECR
