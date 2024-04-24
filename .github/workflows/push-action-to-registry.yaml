@@ -19,5 +19,5 @@ jobs:
 
       - name: Docker build and push (Skip this step if image exists)
         run: |
-          docker build -t k4kratik/container-image-existence-checker:${{ github.sha }} .
-          docker push k4kratik/container-image-existence-checker:${{ github.sha }}
+          docker build -t k4kratik/container-image-existence-checker:latest .
+          docker push k4kratik/container-image-existence-checker:latest

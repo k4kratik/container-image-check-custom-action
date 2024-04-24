@@ -30,7 +30,7 @@ outputs:
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: k4kratik/container-image-existence-checker:latest
   args:
     - ${{ inputs.type }}
     - ${{ inputs.container_repo_name }}
