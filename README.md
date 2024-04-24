@@ -39,7 +39,7 @@ _for ecr, it assumes you have already set up the AWS Creds setup. You can use th
 - name: Check if the image exists
   uses: k4kratik/container-image-check-custom-action
   with:
-    type: dockerhub # or ecr
-    container_repo_name: my-service-name
+    type: ecr
+    container_repo_name: my-backend-service
     image_tag: ${{ github.sha }}
 ```
