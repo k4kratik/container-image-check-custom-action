@@ -18,7 +18,7 @@ function check_ecr_image_tag_if_exists() {
         echo $IMAGE_TAGS
         echo "image_exists=true" >>$GITHUB_OUTPUT
         echo "Image $1:$2 exists on ecr."
-        echo $IMAGE_META | jq
+        echo $IMAGE_META
     else
         echo "$1:$2 does not exist on ecr."
         echo "image_exists=false" >>$GITHUB_OUTPUT
